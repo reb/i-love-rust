@@ -12,7 +12,7 @@ fn convert_to_fruit(line: &str) -> Result<Fruit, &str> {
 fn test_convert_to_fruit() {
     let fruit = convert_to_fruit("banana, 21");
 
-    let name = "banana".to_string();
+    let name = "banana".to_owned();
     let amount = 21;
     let expected = Ok(Fruit { name, amount });
     assert_eq!(fruit, expected);
